@@ -1,0 +1,38 @@
+body {
+	background-color:  lightslategray;
+	text-align: center;
+
+}
+
+img {
+	margin:  60px 0 30px 0;
+}
+
+p {
+	color:  white;
+	font-family:  Shanti;
+	font-size:  1.2em;
+	margin: 20px;
+}
+
+input {
+	width:  470px;
+	height: 60px;
+	margin: 20px;
+	border: none;
+	border-radius: 10px;
+	font-family:  Shanti;
+	text-align: center;
+	font-size:  1.3em;
+}
+
+#enterButton {
+	background-color:  palevioletred;
+	color:  white;
+	width:  210px;
+}
+
+#enterButton:hover {
+	background-color:  mediumvioletred;
+	cursor:  pointer;
+}
