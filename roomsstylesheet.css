@@ -1,141 +1,118 @@
-#connor {
-	text-align: left;
-
-}
-
-#copyright {
-	text-align: center;
-}
-
-
 body {
-	background-color: #888888;
-	text-align: center;
-	font-family: 'Lato', sans-serif;
+        background-color: #888888;
+        text-align: center;
+        font-family: 'Lato', sans-serif;
 	overflow-x:hidden;
 
 }
 
 h1 {
-	text-align: left;
-	color: white;
+        text-align: left;
+        color: white;
 }
 
-h2 {
-	text-align: center;
-        font-family: 'Lato', sans-serif;
-	color: white;
-}
 
 footer {
-	background-color: white;
-	position: absolute;
-	bottom: 0;
-	width: 99%;
-	height: 4rem;
-	color: black;
-	font-size: 0.8em;
-	font-family: 'Lato', sans-serif;    
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        width: 99%;
+        height: 4rem;
+        color: black;
+        font-size: 0.8em;
+        font-family: 'Lato', sans-serif;    
 }
 
 #connor {
-	text-align: left;
+        text-align: left;
 
 }
 
 #copyright {
-	text-align: center;
-}
-
-#inputtext {
-        color:  white;
-        font-family:  'Lato', sans-serif;
-        font-size:  1.9em;
-        margin: 5px;
-}
-
-#alias_input {
-        width:  580px;
-        height: 70px;
-        margin: 20px;
-        border: none;
-        border-radius: 10px;
-        font-family:  'Lato', sans-serif;
         text-align: center;
-        font-size:  1.6em;
 }
 
-#alias_input:hover {
-	font-size: 1.55em;
-
+h1 {
+        text-align: left;
+        color: white;
 }
 
-/* start button css ----------------------------------------------------------------------------------------- */
-
-.wrapper {
-	position: fixed;
-	top: 125%;	
-	left: 50%;
-	transform: translate(-50%, -50%);
+#end {
+    color: white;
 }
 
-.link_wrapper {
-	position: relative;
+h2 {
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+        color: white;
 }
 
-#formbutton {
-	display: block;
-	width: 265px;
-	height: 65px;
-	line-height: 50px;
-	font-size: 120%;
-	font-weight: bold;
-	text-decoration: none;
-	background: #db7093;
-	text-align: center;
-	color: #fff;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	border: 3px solid #db7093;
-	transition: all .35s;
+/* start button css ---------------------------------------------------------------------------------- */ 
+
+.wrapper{
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.link_wrapper{
+  position: relative;
+}
+
+a{
+  display: block;
+  width: 265px;
+  height: 65px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #db7093;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #db7093;
+  transition: all .35s;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    position: fixed;
+    transform: rotate(45deg);
+    right: 0;
+    top: 5%;
+    z-index: -1;
+    transition: all .35s;
 }
 
 .icon svg{
-	width: 30px;
-	position: absolute;
-	top: calc(50% - 15px);
-	left: calc(50% - 15px);
-	transform: rotate(-45deg);
-	fill: #00FF00;
-	transition: all .35s;
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: #f44336;
+  transition: all .35s;
 }
 
-.icon {
-	width: 50px;
-	height: 50px;
-	border: 3px solid transparent;
-	position: fixed;
-	transform: rotate(45deg);
-	right: 0;
-	top: 5%;
-	z-index: -1;
-	transition: all .35s;
+a:hover{
+    width: 225px;
+    border: 3px solid #f44336;
+    background: transparent;
+    color: #f44336;
 }
 
-#formbutton:hover {
-	width: 225px;
-	border: 3px solid #00FF00;
-	background: transparent;
-	color: #00FF00;
-}
-
-#formbutton:hover + .icon{
-  border: 3px solid #00FF00;
+a:hover + .icon{
+  border: 3px solid #f44336;
   right: -20%;
 }
 
 
-/* start menu css ------------------------------------------------------------------------------------------- */
+/* start menu css -------------------------------------------------------------------------------- */
+
 .clearfix:before,
 .clearfix:after {
     content: " ";

@@ -1,6 +1,118 @@
-body { 
+body {
+        background-color: #888888;
+        text-align: center;
+        font-family: 'Lato', sans-serif;
 	overflow-x:hidden;
+
 }
+
+h1 {
+        text-align: left;
+        color: white;
+}
+
+
+footer {
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        width: 99%;
+        height: 4rem;
+        color: black;
+        font-size: 0.8em;
+        font-family: 'Lato', sans-serif;    
+}
+
+#connor {
+        text-align: left;
+
+}
+
+#copyright {
+        text-align: center;
+}
+
+h1 {
+        text-align: left;
+        color: white;
+}
+
+#end {
+    color: white;
+}
+
+h2 {
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+        color: white;
+}
+
+/* start button css ---------------------------------------------------------------------------------- */ 
+
+.wrapper{
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.link_wrapper{
+  position: relative;
+}
+
+a{
+  display: block;
+  width: 265px;
+  height: 65px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #db7093;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #db7093;
+  transition: all .35s;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    position: fixed;
+    transform: rotate(45deg);
+    right: 0;
+    top: 5%;
+    z-index: -1;
+    transition: all .35s;
+}
+
+.icon svg{
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: #f44336;
+  transition: all .35s;
+}
+
+a:hover{
+    width: 225px;
+    border: 3px solid #f44336;
+    background: transparent;
+    color: #f44336;
+}
+
+a:hover + .icon{
+  border: 3px solid #f44336;
+  right: -20%;
+}
+
+
+/* start menu css -------------------------------------------------------------------------------- */
+
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -156,8 +268,8 @@ body {
   position: relative;
   color: palevioletred;
   border:0;
-  /*border-top: 4px solid #e67e22;
-  border-bottom: 4px solid #e67e22;
+  /*border-top: 4px solid palevioletred;
+  border-bottom: 4px solid palevioletred;
   margin-top: -4px;*/
   box-shadow: 0 0 5px #DDD;
   -moz-box-shadow: 0 0 5px #DDD;
@@ -174,7 +286,7 @@ body {
   position: absolute;
   /*top: 0;
   left: 45%;
-  border-top: 5px solid #e67e22;
+  border-top: 5px solid palevioletred;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;*/
   
@@ -264,7 +376,7 @@ body {
   padding: 0;
   margin: 0;
   background: #FFF;
-  /*border-top: 4px solid #e67e22;*/
+  /*border-top: 4px solid palevioletred;*/
   opacity: 0;
   visibility: hidden;
   transition: all 300ms linear;
@@ -286,7 +398,7 @@ body {
   position: absolute;
   /*top: -8px;
   left: 23%;
-  border-bottom: 5px solid #e67e22;
+  border-bottom: 5px solid palevioletred;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;*/
   
@@ -398,7 +510,7 @@ body {
 .search-mobile { 
 	display:none !important;
 	background:palevioletred;
-	border-left:1px solid #e67e22;
+	border-left:1px solid palevioletred;
 	border-radius:0 3px 3px 0;
 }
 .search-mobile i { 
@@ -515,13 +627,13 @@ body {
 		left:35px;
 		top: 45px;
 		border:0;
-		border-top:4px solid #e67e22;
+		border-top:4px solid palevioletred;
 	}
 	.mcd-menu li ul li ul li > ul:before {
 		left:30px;
 		top: -9px;
 		border:0;
-		border-bottom:5px solid #e67e22;
+		border-bottom:5px solid palevioletred;
 		border-left:5px solid transparent;
 		border-right:5px solid transparent;
 	}
@@ -561,7 +673,7 @@ body {
 		position:absolute;
 		bottom:0px;
 		left:0;
-		background:#e67e22;
+		background:palevioletred;
 		color:#FFF;
 		min-width:100%;
 		text-transform:lowercase;
@@ -591,13 +703,13 @@ body {
 		left:35px;
 		top: 45px;
 		border:0;
-		border-top:4px solid #e67e22;
+		border-top:4px solid palevioletred;
 	}
 	.mcd-menu li ul li ul li > ul:before {
 		left:30px;
 		top: -9px;
 		border:0;
-		border-bottom:5px solid #e67e22;
+		border-bottom:5px solid palevioletred;
 		border-left:5px solid transparent;
 		border-right:5px solid transparent;
 	}

@@ -2,10 +2,60 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>The Zone</title>
+		<link rel="stylesheet" href="{{url_for('static', filename='css/thezonestylesheet.css')}}">
+		<title>Squabbler | The Zone</title>
 	</head>
 	<body>
-		<h1>Under Construction...</h1>
+		<h1>SQUABBLER ZONE</h1>
+		<h2>ALIAS: {{ alias }}</h2>
+		<div class="container" style="position:absolute; left:0.6%; top:9%; display:inline">
+			<nav>
+			<ul class="mcd-menu">
+				<li>
+					<a href="{{url_for('thezone')}}" class="active">
+						<i class="fa fa-home"></i>
+						<strong>THE ZONE</strong>
+						<small>You Are Here</small>
+					</a>
+				</li>
+				<li>
+					<a href=""> 
+						<i class="fa fa-edit"></i>
+						<strong>What is this</strong>
+						<small>What is Squabbler?</small>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="fa fa-gift"></i>
+						<strong>Anonymity</strong>
+						<small>How to Stay Anonymous</small>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="fa fa-envelope-o"></i>
+						<strong>Contact</strong>
+						<small>Reach Out</small>
+					</a>
+				</li>
+      				<li>
+					<a href="{{url_for('logout')}}">
+						<i class="fa fa-globe"></i>
+						<strong>Log Out</strong>
+						<small>End Squabbler Session</small>
+					</a>
+				</li>
+				<li class="float">
+	
+					
+				</li>
+			</ul>
+			</nav>
+		</div>
 	</body>
-
+        <footer>
+                <p style="color:black;" id="Connor">Project By Connor Fulbright</p>
+                <p style="color:black;"id="Copyright">Not Copyright Yet 2022 Squabbler. All Rights Reserved</p>
+        </footer>
 </html>
