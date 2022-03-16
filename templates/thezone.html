@@ -1,59 +1,66 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="{{url_for('static', filename='css/thezonestylesheet.css')}}">
-		<title>Squabbler | The Zone</title>
-	</head>
-	<body>
-		<h1 id="h1s">SQUABBLER ZONE</h1>
-		<h2>ALIAS: {{ alias }}</h2>
-		<div class="container" style="position:absolute; left:0.6%; top:9%; display:inline">
-			<nav>
-			<ul class="mcd-menu">
-				<li>
-					<a href="{{url_for('thezone')}}" class="active">
-						<i class="fa fa-home"></i>
-						<strong>THE ZONE</strong>
-						<small>You Are Here</small>
-					</a>
-				</li>
-				<li>
-					<a href=""> 
-						<i class="fa fa-edit"></i>
-						<strong>What is this</strong>
-						<small>What is Squabbler?</small>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<i class="fa fa-gift"></i>
-						<strong>Anonymity</strong>
-						<small>How to Stay Anonymous</small>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<i class="fa fa-envelope-o"></i>
-						<strong>Contact</strong>
-						<small>Reach Out</small>
-					</a>
-				</li>
-      				<li>
-					<a href="{{url_for('logout')}}">
-						<i class="fa fa-globe"></i>
-						<strong>Exit</strong>
-						<small>End Squabbler Session</small>
-					</a>
-				</li>
-				<li class="float">
-	
-					
-				</li>
-			</ul>
-			</nav>
-		</div>
-	</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/thezonestylesheet.css')}}">
+        <title>Squabbler | The Zone</title>
+    </head>
+    <body>
+        <h1 id="h1s"><span style="color: palevioletred;">&lt;</span>S<span style="color: palevioletred;">Q</span>UABBLER ZONE<span style="color: palevioletred;">&gt;</span></h1>
+        <h2>ALIAS: <span style="color:palevioletred;">{{ alias }}</span></h2>
+        <div class="container" style="position:absolute; left:0.6%; top:9%; display:inline">
+            <nav>
+            <ul class="mcd-menu">
+                <li>
+                    <a href="{{url_for('thezone')}}" class="active">
+                        <i class="fa fa-home"></i>
+                        <strong>THE ZONE</strong>
+                        <small>You Are Here</small>
+                    </a>
+                </li>
+                <li>
+                    <a href=""> 
+                        <i class="fa fa-edit"></i>
+                        <strong>What is this</strong>
+                        <small>What is Squabbler?</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa fa-gift"></i>
+                        <strong>Anonymity</strong>
+                        <small>How to Stay Anonymous</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa fa-envelope-o"></i>
+                        <strong>Contact</strong>
+                        <small>Reach Out</small>
+                    </a>
+                </li>
+                    <li>
+                        <a href="">
+                            <i class="fa fa-gift"></i>
+                            <strong>Rights & Regulations</strong>
+                            <small>Maintaining Professionalism</small>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="{{url_for('logout')}}">
+                        <i class="fa fa-globe"></i>
+                        <strong>Exit</strong>
+                        <small>End Squabbler Session</small>
+                    </a>
+                </li>
+                <li class="float">
+    
+                    
+                </li>
+            </ul>
+            </nav>
+        </div>
 
 <main class="site-wrapper" style="position:absolute; top:40%; left:74.3%; transform: translate(-50%, -50%); color: white; display:inline;">
   <div class="pt-table desktop-768">
@@ -82,7 +89,7 @@
                                                 </span>
                                                 <span class="title"><b>SOLO ENGAGEMENT</b></span>
                                             </span>
-                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="palevioletred"></path></svg>
                                         </a>
                                     </div>
                                     <div class="hexagon-item">
@@ -103,7 +110,7 @@
                                                 </span>
                                                 <span class="title"><b>MULTI ENGAGEMENT</b></span>
                                             </span>
-                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="palevioletred"></path></svg>
                                         </a>    
                                     </div>
                                     <div class="hexagon-item">
@@ -117,14 +124,14 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a class="hex-content" id="a">
+                                        <a href="{{ url_for('createengagement')}}" class="hex-content" id="a">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-id-badge"></i>
                                                 </span>
                                                 <span class="title"><b>CREATE ENGAGEMENT</b></span>
                                             </span>
-                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="palevioletred"></path></svg>
                                         </a>
                                     </div>
                                 </div>
@@ -134,9 +141,9 @@
                 </div>
             </div>
   </main>
-
+</body>
         <footer>
-                <p style="color:black;" id="Connor">Project By Connor Fulbright</p>
-                <p style="color:black;"id="Copyright">Not Copyright Yet 2022 Squabbler. All Rights Reserved</p>
+                <p style="color:#777;" id="Connor"><strong>Project By Connor Fulbright</strong></p>
+                <p style="color:#777;"id="Copyright"><strong>Not Copyright Yet Squabbler 2022. No Rights Reserved.</strong></p>
         </footer>
 </html>

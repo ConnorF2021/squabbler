@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 	<head>
+        <meta name="robots" content="noindex">
 		<link rel="stylesheet" href="{{url_for('static', filename='css/chatstylesheet.css')}}">
 		<title>Squabbler | Live</title>
 	</head>
 
 	<body>
-		<h1>SQUABBLER LIVE</h1>
+		<h1 id="h1s"><span style="color: palevioletred;">&lt;</span>S<span style="color: palevioletred;">Q</span>UABBLER LIVE<span style="color: palevioletred;">&gt;</span></h1>
 
-		<h2>ALIAS: {{ username }}, ROOM: {{ room }}</h2>
+		<h2 id="h2a">ALIAS: {{ username }}, ROOM: {{ room }}</h2>
 		<div id="messages"></div>
 		
 			<form id="message_input_form">
-				<input type="text" id="message_input" autocomplete="off" placeholder="Press enter to send message">
-				<button type="Submit">Send</button>
+				<input type="text" id="message_input" autocomplete="off" placeholder="Press Enter To Send Message" spellcheck="false">
 			</form>
 
 

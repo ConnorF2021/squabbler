@@ -18,7 +18,7 @@ footer {
         bottom: 0;
         width: 99%;
         height: 4rem;
-        color: black;
+        color: #777;
         font-size: 0.8em;
         font-family: 'Lato', sans-serif;    
 }
@@ -49,45 +49,34 @@ h2 {
 
 /* start button css ---------------------------------------------------------------------------------- */ 
 
-.wrapper {
-    position: fixed;
-    top: 125%;  
-    left: 50%;
-    transform: translate(-50%, -50%);
+.wrapper{
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.link_wrapper {
-    position: relative;
+.link_wrapper{
+  position: relative;
 }
 
-#formbutton {
-    display: block;
-    width: 265px;
-    height: 65px;
-    line-height: 50px;
-    font-size: 120%;
-    font-weight: bold;
-    text-decoration: none;
-    background: #db7093;
-    text-align: center;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: 3px solid #db7093;
-    transition: all .35s;
+#logoutbutton{
+  display: block;
+  width: 265px;
+  height: 65px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #db7093;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #db7093;
+  transition: all .35s;
 }
 
-.icon svg{
-    width: 30px;
-    position: absolute;
-    top: calc(50% - 15px);
-    left: calc(50% - 15px);
-    transform: rotate(-45deg);
-    fill: #00FF00;
-    transition: all .35s;
-}
-
-.icon {
+.icon{
     width: 50px;
     height: 50px;
     border: 3px solid transparent;
@@ -99,18 +88,27 @@ h2 {
     transition: all .35s;
 }
 
-#formbutton:hover {
-    width: 225px;
-    border: 3px solid #00FF00;
-    background: transparent;
-    color: #00FF00;
+.icon svg{
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: #f44336;
+  transition: all .35s;
 }
 
-#formbutton:hover + .icon{
-  border: 3px solid #00FF00;
+#logoutbutton:hover{
+    width: 225px;
+    border: 3px solid #f44336;
+    background: transparent;
+    color: #f44336;
+}
+
+#logoutbutton:hover + .icon{
+  border: 3px solid #f44336;
   right: -20%;
 }
-
 
 
 /* start menu css -------------------------------------------------------------------------------- */

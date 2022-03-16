@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, flash, redirect, session, url_for, escape, make_response
 from flask_socketio import SocketIO, join_room, leave_room, emit
+import random
+import string
 
 app = Flask(__name__)
 socketio = SocketIO(app)
@@ -22,7 +24,11 @@ def setalias():
 		alias_unfiltered = request.form['alias_input']
 		session['Alias'] = alias_unfiltered.upper()
 		Alias = session['Alias']
-		return redirect(url_for('thezone'))
+		letters = string.punctuation
+		UserID = ( ''.join(random.choice(letters) for i in range(30)) )
+		resp = make_response(redirect(url_for('thezone')))
+		resp.set_cookie('UserID', UserID)
+		return resp
 	return render_template("setalias.html")
 
 @app.route("/Anon")
@@ -76,6 +82,23 @@ def soloengagements():
 
 	return redirect(url_for('setalias'))
 
+@app.route("/CreateEngagement", methods = ['GET', 'POST'])
+def createengagement():
+	if request.method == 'POST':
+		room_unfiltered = request.form['room_input']
+		room = room_unfiltered
+
+		resp = make_response(redirect(url_for('sololive')))
+		resp.set_cookie('room', room)
+		return resp
+
+
+	elif 'Alias' in session and not request.method == 'POST':
+		Alias = session['Alias']
+		return render_template("rooms.html", alias = session['Alias'])
+
+	return redirect(url_for('setalias'))
+
 @app.route("/SoloLive", methods = ['GET', 'POST'])
 def sololive():
 	if 'Alias' in session:
@@ -107,4 +130,4 @@ def handle_leave_room_event(data):
 
 
 if __name__ == '__main__':
-    socketio.run(app, debug=True)
+    socketio.run(app, host='0.0.0.0', debug=True)
