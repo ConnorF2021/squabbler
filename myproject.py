@@ -22,12 +22,11 @@ def setalias():
 		return redirect(url_for('thezone'))
 	elif request.method == 'POST':
 		alias_unfiltered = request.form['alias_input']
-		session['Alias'] = alias_unfiltered.upper()
-		Alias = session['Alias']
+		Alias = alias_unfiltered.upper()
 		letters = string.punctuation
-		UserID = ( ''.join(random.choice(letters) for i in range(30)) )
+		session["UserID"] = ( ''.join(random.choice(letters) for i in range(30)) )
 		resp = make_response(redirect(url_for('thezone')))
-		resp.set_cookie('UserID', UserID)
+		resp.set_cookie('Alias', Alias)
 		return resp
 	return render_template("setalias.html")
 
@@ -47,22 +46,22 @@ def info():
 
 @app.route("/Logout")
 def logout():
-	if 'Alias' in session:
+	if 'UserID' in session:
 		return render_template("logout.html")
 	return redirect(url_for('setalias'))
 
 @app.route("/TheZone", methods = ['GET','POST'])
 def thezone():
-	if 'Alias' in session:
-		Alias = session['Alias']
-		return render_template("thezone.html", alias = session['Alias'])
+	if 'UserID' in session:
+		Alias = request.cookies.get('Alias')
+		return render_template("thezone.html", alias = Alias)
 
 	return redirect(url_for('setalias'))
 
 
 @app.route("/Terminate")
 def terminate():
-	session.pop('Alias', None)
+	session.pop('UserID', None)
 	return redirect(url_for('setalias'))
 
 @app.route("/SoloEngagements", methods = ['GET', 'POST'])
@@ -76,9 +75,9 @@ def soloengagements():
 		return resp
 
 
-	elif 'Alias' in session and not request.method == 'POST':
-		Alias = session['Alias']
-		return render_template("rooms.html", alias = session['Alias'])
+	elif 'UserID' in session and not request.method == 'POST':
+		Alias = request.cookies.get('Alias')
+		return render_template("rooms.html", alias = Alias)
 
 	return redirect(url_for('setalias'))
 
@@ -94,15 +93,15 @@ def createengagement():
 
 
 	elif 'Alias' in session and not request.method == 'POST':
-		Alias = session['Alias']
+		Alias = request.cookies.get('Alias')
 		return render_template("rooms.html", alias = session['Alias'])
 
 	return redirect(url_for('setalias'))
 
 @app.route("/SoloLive", methods = ['GET', 'POST'])
 def sololive():
-	if 'Alias' in session:
-		username = session['Alias']
+	if 'UserID' in session:
+		username = request.cookies.get('Alias')
 		room = request.cookies.get('room')
 		return render_template("chat.html", username = username, room = room)
 	return redirect(url_for('setalias'))
