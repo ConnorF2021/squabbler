@@ -94,7 +94,7 @@ def createengagement():
 
 	elif 'UserID' in session and not request.method == 'POST':
 		Alias = request.cookies.get('Alias')
-		return render_template("rooms.html", alias = session['Alias'])
+		return render_template("rooms.html", alias = Alias)
 
 	return redirect(url_for('setalias'))
 
