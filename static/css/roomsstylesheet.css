@@ -6,11 +6,14 @@ body {
 
 }
 
-h1 {
+#h1s {
         text-align: left;
         color: white;
 }
 
+#h2s {
+    text-align: right;     
+}
 
 footer {
         background-color: white;

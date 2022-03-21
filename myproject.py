@@ -18,7 +18,7 @@ def landing():
 
 @app.route("/SetAlias", methods = ['GET','POST'])
 def setalias():
-	if 'Alias' in session:
+	if 'UserID' in session:
 		return redirect(url_for('thezone'))
 	elif request.method == 'POST':
 		alias_unfiltered = request.form['alias_input']
@@ -36,9 +36,10 @@ def anon():
 
 @app.route("/Contact")
 def contact():
-	if 'Alias' in session:
-		return redirect(url_for('setalias'))
-	return render_template("contact.html")
+	if 'UserID' in session:
+		return render_template("contact.html")
+	return redirect(url_for('setalias'))
+	
 
 @app.route("/Info")
 def info():
@@ -62,16 +63,19 @@ def thezone():
 @app.route("/Terminate")
 def terminate():
 	session.pop('UserID', None)
-	return redirect(url_for('setalias'))
+	resp = make_response(redirect(url_for('setalias')))
+	resp.set_cookie('Alias', 'None', max_age=0)
+	resp.set_cookie('roomID', 'None', max_age=0)
+	return resp
 
 @app.route("/SoloEngagements", methods = ['GET', 'POST'])
 def soloengagements():
 	if request.method == 'POST':
 		room_unfiltered = request.form['room_input']
-		room = room_unfiltered
+		roomID = room_unfiltered
 
 		resp = make_response(redirect(url_for('sololive')))
-		resp.set_cookie('room', room)
+		resp.set_cookie('roomID', roomID)
 		return resp
 
 
@@ -84,17 +88,23 @@ def soloengagements():
 @app.route("/CreateEngagement", methods = ['GET', 'POST'])
 def createengagement():
 	if request.method == 'POST':
-		room_unfiltered = request.form['room_input']
-		room = room_unfiltered
+		topic_unfiltered = request.form['topic_input']
+		topic = topic_unfiltered
+
+		desc_unfiltered = request.form['desc_input']
+		desc = desc_unfiltered
+
+		digits = string.digits
+		roomID = ( ''.join(random.choice(digits) for i in range(20)) )
 
 		resp = make_response(redirect(url_for('sololive')))
-		resp.set_cookie('room', room)
+		resp.set_cookie('roomID', roomID)
 		return resp
 
 
 	elif 'UserID' in session and not request.method == 'POST':
 		Alias = request.cookies.get('Alias')
-		return render_template("rooms.html", alias = Alias)
+		return render_template("createroom.html", alias = Alias)
 
 	return redirect(url_for('setalias'))
 
@@ -102,8 +112,8 @@ def createengagement():
 def sololive():
 	if 'UserID' in session:
 		username = request.cookies.get('Alias')
-		room = request.cookies.get('room')
-		return render_template("chat.html", username = username, room = room)
+		roomID = request.cookies.get('roomID')
+		return render_template("chat.html", username = username, room = roomID)
 	return redirect(url_for('setalias'))
 
 @socketio.on('send_message')

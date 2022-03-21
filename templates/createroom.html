@@ -7,8 +7,8 @@
 	</head>
 
 	<body>
-		<h1><span style="color: palevioletred;">&lt;</span>S<span style="color: palevioletred;">Q</span>UABBLER ENGAGEMENTS<span style="color: palevioletred;">&gt;</span></h1>
-		<h2>ALIAS: <span style="color:palevioletred;">{{ alias }}</span></h2>
+            <h1 id="h1s" style="position: absolute; left:0.8%; top:0%"><span style="color: palevioletred;">&lt;</span>S<span style="color: palevioletred;">Q</span>UABBLER<span style="color: palevioletred; display: inline;">&gt;</span></h1>
+            <h1 id="h2s" style="position:absolute; right:0.8%; top:0%;"><span style="color: palevioletred;">&lt;</span><span style="color:whitesmoke;">{{ alias }}</span><span style="color: palevioletred;">&gt;</span></h1>
         <div class="container" style="position:absolute; left:0.6%; top:9%; display:inline">
             <nav>
             <ul class="mcd-menu">
@@ -36,7 +36,7 @@
                 <li>
                     <a href="">
                         <i class="fa fa-envelope-o"></i>
-                        <strong>Contact</strong>
+                        <strong>Feedback</strong>
                         <small>Reach Out</small>
                     </a>
                 </li>
@@ -62,12 +62,16 @@
             </nav>
         </div>
 
-		<p style="color:white;">Chat Development</p>
-		<form action="" method="post" id="room_submit">
+		<p style="color:white;">Create Engagement</p>
+		<form action="" method="post" id="topic_submit">
 			<div>
-				<label>Room ID</label>
-				<input type="text" name="room_input" id="room_input" style="display: inline; position: absolute;">
-				<input type="submit" value="Submit">
+				<label>Topic Title</label>
+				<input type="text" name="topic_input" id="topic_input" style="display: inline; position: absolute;">
+                <input type="submit">
+                <br>
+                <label>Description</label>
+                <input type="text" name="desc_input" id="desc_input" style="display: inline; position: absolute;">
+                <input type="submit">
 			</div>
 		</form>
 
@@ -77,6 +81,6 @@
 	</body>
         <footer>
         <p style="color:#777;" id="Connor"><strong>Project By Connor Fulbright</strong></p>
-                <p style="color:#777;"id="Copyright"><strong>Not Copyright Yet Squabbler 2022. No Rights Reserved.</strong></p>
+        <p style="color:#777;"id="Copyright"><strong>Not Copyright Yet Squabbler 2022. No Rights Reserved.</strong></p>
         </footer>
 </html>
