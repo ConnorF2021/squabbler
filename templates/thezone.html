@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="robots" content="noindex">
         <link rel="stylesheet" href="{{url_for('static', filename='css/thezonestylesheet.css')}}">
+        <script src="https://kit.fontawesome.com/ea05a55ff2.js" crossorigin="anonymous"></script>
         <title>Squabbler | The Zone</title>
     </head>
     <body>
@@ -21,35 +22,35 @@
                 </li>
                 <li>
                     <a href=""> 
-                        <i class="fa fa-edit"></i>
+                        <i class="fa-solid fa-circle-question"></i>
                         <strong>What is this</strong>
                         <small>What is Squabbler?</small>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <i class="fa fa-gift"></i>
+                        <i class="fa-solid fa-ghost"></i>
                         <strong>Anonymity</strong>
                         <small>How to Stay Anonymous</small>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <i class="fa fa-envelope-o"></i>
+                        <i class="fa-solid fa-message"></i>
                         <strong>Feedback</strong>
                         <small>Reach Out</small>
                     </a>
                 </li>
                     <li>
                         <a href="">
-                            <i class="fa fa-gift"></i>
-                            <strong>Rights & Regulations</strong>
+                            <i class="fa-solid fa-scroll"></i>
+                            <strong>Regulations</strong>
                             <small>Maintaining Professionalism</small>
                         </a>
                     </li>
                     <li>
                     <a href="{{url_for('logout')}}">
-                        <i class="fa fa-globe"></i>
+                        <i class="fa-solid fa-circle-xmark"></i>
                         <strong>Exit</strong>
                         <small>End Squabbler Session</small>
                     </a>
@@ -85,9 +86,9 @@
                                         <a href="{{ url_for('soloengagements')}}" class="hex-content" id="a">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
-                                                    <i class="fa fa-bullseye"></i>
+                                                    <i class="fa fa-user"></i>
                                                 </span>
-                                                <span class="title"><b>SOLO ENGAGEMENT</b></span>
+                                                <span class="title"><b>SOLO SQUABBLE</b></span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="palevioletred"></path></svg>
                                         </a>
@@ -106,9 +107,9 @@
                                         <a  class="hex-content" id="a">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
-                                                    <i class="fa fa-braille"></i>
+                                                    <i class="fa fa-users"></i>
                                                 </span>
-                                                <span class="title"><b>MULTI ENGAGEMENT</b></span>
+                                                <span class="title"><b>MULTI SQUABBLE</b></span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="palevioletred"></path></svg>
                                         </a>    
@@ -127,9 +128,9 @@
                                         <a href="{{ url_for('createengagement')}}" class="hex-content" id="a">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
-                                                    <i class="fa fa-id-badge"></i>
+                                                    <i class="fa solid fa-plus"></i>
                                                 </span>
-                                                <span class="title"><b>CREATE ENGAGEMENT</b></span>
+                                                <span class="title"><b>CREATE SQUABBLE</b></span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="palevioletred"></path></svg>
                                         </a>
@@ -143,7 +144,15 @@
   </main>
 </body>
         <footer>
-                <p style="color:#777;" id="Connor"><strong>Project By Connor Fulbright</strong></p>
-                <p style="color:#777;"id="Copyright"><strong>Not Copyright Yet Squabbler 2022. No Rights Reserved.</strong></p>
+            <div class="footer-basic" style="position:absolute; top:106%; left:50%; transform: translate(-50%, -50%);  display:inline;">
+                <div class="social"><a href="#"><i class="fa-brands fa-tiktok"></i></a><a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">WHAT IS SQUABBLER</a></li>
+                    <li class="list-inline-item"><a href="#">ANONYMITY</a></li>
+                    <li class="list-inline-item"><a href="#">REGULATIONS</a></li>
+                    <li class="list-inline-item"><a href="#">PRIVACY POLICY</a></li>
+                </ul>
+                <p class="copyright">SQUABBLER © 2022</p>
+        </div>
         </footer>
 </html>

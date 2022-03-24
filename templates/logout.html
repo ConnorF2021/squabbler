@@ -3,6 +3,7 @@
 	<head>
 		<meta name="robots" content="noindex">
 		<link rel="stylesheet" href="{{url_for('static', filename='css/logoutstylesheet.css')}}">
+		<script src="https://kit.fontawesome.com/ea05a55ff2.js" crossorigin="anonymous"></script>
 		<title>Squabbler | Exit</title>
 	</head>
 
@@ -13,7 +14,7 @@
             <ul class="mcd-menu">
                 <li>
                     <a href="{{url_for('thezone')}}">
-                        <i class="fa fa-home"></i>
+                        <i class="fa-solid fa-arrow-left"></i>
                         <strong>THE ZONE</strong>
                         <small>Back to The Zone</small>
                     </a>
@@ -40,7 +41,15 @@
 
 	</body>
         <footer>
-                <p style="color:#777;" id="Connor"><strong>Project By Connor Fulbright</strong></p>
-                <p style="color:#777;"id="Copyright"><strong>Not Copyright Yet Squabbler 2022. No Rights Reserved.</strong></p>
+        	<div class="footer-basic" style="position:absolute; top:106%; left:50%; transform: translate(-50%, -50%);  display:inline;">
+	            <div class="social"><a href="#"><i class="fa-brands fa-tiktok"></i></a><a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+	            <ul class="list-inline">
+	                <li class="list-inline-item"><a href="#">WHAT IS SQUABBLER</a></li>
+	                <li class="list-inline-item"><a href="#">ANONYMITY</a></li>
+	                <li class="list-inline-item"><a href="#">REGULATIONS</a></li>
+	                <li class="list-inline-item"><a href="#">PRIVACY POLICY</a></li>
+	            </ul>
+	            <p class="copyright">SQUABBLER © 2022</p>
+
         </footer>
 </html>

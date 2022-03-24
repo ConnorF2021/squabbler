@@ -3,6 +3,7 @@
 	<head>
         <meta name="robots" content="noindex">
 		<link rel="stylesheet" href="{{url_for('static', filename='css/createstylesheet.css')}}">
+        <script src="https://kit.fontawesome.com/ea05a55ff2.js" crossorigin="anonymous"></script>
 		<title>Squabbler | Create Engagement</title>
 	</head>
 
@@ -14,42 +15,42 @@
             <ul class="mcd-menu">
                 <li>
                     <a href="{{url_for('thezone')}}">
-                        <i class="fa fa-home"></i>
+                        <i class="fa-solid fa-arrow-left"></i>
                         <strong>THE ZONE</strong>
                         <small>Back to The Zone</small>
                     </a>
                 </li>
                 <li>
                     <a href=""> 
-                        <i class="fa fa-edit"></i>
+                        <i class="fa-solid fa-circle-question"></i>
                         <strong>What is this</strong>
                         <small>What is Squabbler?</small>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <i class="fa fa-gift"></i>
+                        <i class="fa-solid fa-ghost"></i>
                         <strong>Anonymity</strong>
                         <small>How to Stay Anonymous</small>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <i class="fa fa-envelope-o"></i>
+                        <i class="fa-solid fa-message"></i>
                         <strong>Feedback</strong>
                         <small>Reach Out</small>
                     </a>
                 </li>
                     <li>
                         <a href="">
-                            <i class="fa fa-gift"></i>
-                            <strong>Rights & Regulations</strong>
+                            <i class="fa-solid fa-scroll"></i>
+                            <strong>Regulations</strong>
                             <small>Maintaining Professionalism</small>
                         </a>
                     </li>
                     <li>
                     <a href="{{url_for('logout')}}">
-                        <i class="fa fa-globe"></i>
+                        <i class="fa-solid fa-circle-xmark"></i>
                         <strong>Exit</strong>
                         <small>End Squabbler Session</small>
                     </a>
@@ -80,7 +81,15 @@
 
 	</body>
         <footer>
-        <p style="color:#777;" id="Connor"><strong>Project By Connor Fulbright</strong></p>
-        <p style="color:#777;"id="Copyright"><strong>Not Copyright Yet Squabbler 2022. No Rights Reserved.</strong></p>
+            <div class="footer-basic" style="position:absolute; top:106%; left:50%; transform: translate(-50%, -50%);  display:inline;">
+                <div class="social"><a href="#"><i class="fa-brands fa-tiktok"></i></a><a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">WHAT IS SQUABBLER</a></li>
+                    <li class="list-inline-item"><a href="#">ANONYMITY</a></li>
+                    <li class="list-inline-item"><a href="#">REGULATIONS</a></li>
+                    <li class="list-inline-item"><a href="#">PRIVACY POLICY</a></li>
+                </ul>
+                <p class="copyright">SQUABBLER © 2022</p>
+
         </footer>
 </html>
