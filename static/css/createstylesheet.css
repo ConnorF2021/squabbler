@@ -1,42 +1,37 @@
 body {
-        background-color: #888888;
-        text-align: center;
+        background-color: whitesmoke;
         font-family: 'Lato', sans-serif;
-	overflow-x:hidden;
+    overflow-x:hidden;
+        margin: 0;
 
 }
 
-h1 {
-        text-align: left;
-        color: white;
+#h3s {
+  color: white;
+  margin: 2%; /*****adjust size of header***/
+  filter: drop-shadow(1px 1px 1px palevioletred);
 }
 
 
-
-
-#connor {
-        text-align: left;
-
+#headerline {
+  margin: 0;  /****adjust line in header which impacts total size**/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  filter: drop-shadow(1px 1px 1px palevioletred);
 }
 
-#copyright {
-        text-align: center;
+#chatdev {
+    text-align: center;
 }
 
-h1 {
-        text-align: left;
-        color: white;
+/*******************************************************HEader Start*****************************************/
+
+.header {
+  padding: 10px 16px;
+  background: #777;   /*COLOR OF HEADER*/
+  color: #f1f1f1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#end {
-    color: white;
-}
-
-h2 {
-        text-align: center;
-        font-family: 'Lato', sans-serif;
-        color: white;
-}
 
 /******************************************************************footer staRT********************/
 
@@ -44,6 +39,7 @@ h2 {
   padding: 2% 0;
   background-color:#ffffff;
   color:#4b4c4d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  
 }
 

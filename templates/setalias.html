@@ -8,12 +8,17 @@
 		<script src="https://kit.fontawesome.com/ea05a55ff2.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<img src="{{url_for('static', filename='squabhead.png')}}" align="middle" width="35%" height="10%"/>
-		<br>
+	    <div class="header" id="myHeader">
+            <img src="{{url_for('static', filename='squabhead.png')}}" align="middle" width="32%" height="9%" id="masthead"/>
+            <hr color="palevioletred" size="3px" id="headerline">    
+        </div>
+
+		
+		
 	
-		<div class="container" style="position:absolute; left:0.6%; top:20%; display:inline">
+		<div class="container" style="position:absolute; left:0.6%; top:25%; display:inline;">
 			<nav>
-				<ul class="mcd-menu">
+				<ul class="mcd-menu" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 					<li>
 						<a href="">
 							<i class="fa-solid fa-circle-question"></i>
@@ -43,13 +48,14 @@
 			</nav>
 		</div> 
 
-		<div id="input_form" style="position:absolute; top:40%; left:50%; transform: translate(-50%, -50%);  display:inline;">
+		<div id="input_form" style="position:absolute; top:41%; left:50%; transform: translate(-50%, -50%);  display:inline;">
 			<form action="" method="post" id="form_submit">
-				<h2 id="inputtext">CREATE AN ALIAS</h2>
-				<br>
-				<input required type="text" autocomplete="off" minlength="3" maxlength="12" name="alias_input" id="alias_input" placeholder="TYPE HERE..." style="text-transform:uppercase;" spellcheck="false">
+				<h2 id="inputtext" style="position:absolute; top:23%; left:50%; transform: translate(-50%, -50%);">WHO ARE YOU NOT?</h2>
+				<p id="info" style="position: absolute; top:32%; left:50%; transform: translate(-50%, -50%);"><i>FOR THE SAKE OF ANONYMITY</i></p>
 				
-                                <div class="wrapper" >
+				<input style="position:absolute; top:35%; left: 7.9%; text-transform:uppercase;" required type="text" autocomplete="off" minlength="3" maxlength="12" name="alias_input" id="alias_input" placeholder="TYPE YOUR ALIAS..." spellcheck="false">
+				
+                                <div class="wrapper" style="position: absolute; top:120%; transform: translate(-50%, -50%);">
                                         <div class="link_wrapper">
                                                 <input type="submit" value="ENTER THE ZONE" id="formbutton" style="cursor: pointer;">
 		  				<div class="icon">

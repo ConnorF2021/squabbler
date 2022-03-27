@@ -8,11 +8,14 @@
 	</head>
 
 	<body>
-            <h1 id="h1s" style="position: absolute; left:0.8%; top:0%"><span style="color: palevioletred;">&lt;</span>S<span style="color: palevioletred;">Q</span>UABBLER<span style="color: palevioletred; display: inline;">&gt;</span></h1>
-            <h1 id="h2s" style="position:absolute; right:0.8%; top:0%;"><span style="color: palevioletred;">&lt;</span><span style="color:whitesmoke;">{{ alias }}</span><span style="color: palevioletred;">&gt;</span></h1>
-        <div class="container" style="position:absolute; left:0.6%; top:9%; display:inline">
+        <div class="header" id="myHeader">
+            <h1 id="h3s" style="display: inline-block;"><span style="color: palevioletred;">&lt;</span>{{ alias }}'S SQUABBLE ZONE<span style="color:palevioletred;">&gt;</span></h1>
+            <hr color="palevioletred" size="3px" id="headerline">    
+        </div>
+  
+        <div class="container" style="position:absolute; left:0.6%; top:13%; display:inline">
             <nav>
-            <ul class="mcd-menu">
+            <ul class="mcd-menu" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
                 <li>
                     <a href="{{url_for('thezone')}}">
                         <i class="fa-solid fa-arrow-left"></i>
@@ -63,18 +66,20 @@
             </nav>
         </div>
 
-		<p style="color:white;">Create Engagement</p>
-		<form action="" method="post" id="topic_submit">
-			<div>
-				<label>Topic Title</label>
-				<input type="text" name="topic_input" id="topic_input" style="display: inline; position: absolute;">
-                <input type="submit">
-                <br>
-                <label>Description</label>
-                <input type="text" name="desc_input" id="desc_input" style="display: inline; position: absolute;">
-                <input type="submit">
-			</div>
-		</form>
+        <div id="chatdev">
+		  <p style="color:white;">Create Engagement</p>
+    		<form action="" method="post" id="topic_submit">
+    			<div>
+    				<label>Topic Title</label>
+    				<input required type="text" name="topic_input" id="topic_input" style="display: inline; position: absolute;">
+                    <input type="submit">
+                    <br>
+                    <label>Description</label>
+                    <input required type="text" name="desc_input" id="desc_input" style="display: inline; position: absolute;">
+                    <input type="submit">
+    			</div>
+    		</form>
+        </div>
 
 
 

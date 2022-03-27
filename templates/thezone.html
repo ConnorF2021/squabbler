@@ -8,64 +8,68 @@
         <title>Squabbler | The Zone</title>
     </head>
     <body>
-            <h1 id="h1s" style="position: absolute; left:0.8%; top:0%"><span style="color: palevioletred;">&lt;</span>S<span style="color: palevioletred;">Q</span>UABBLER<span style="color: palevioletred; display: inline;">&gt;</span></h1>
-                <h1 id="h2s" style="position:absolute; right:0.8%; top:0%;"><span style="color: palevioletred;">&lt;</span><span style="color:whitesmoke;">{{ alias }}</span><span style="color: palevioletred;">&gt;</span></h1>
-        <div class="container" style="position:absolute; left:0.6%; top:9%; display:inline">
+        <div class="header" id="myHeader">
+            <h1 id="h3s" style="display: inline-block;"><span style="color: palevioletred;">&lt;</span>S<span style="color:palevioletred;">Q</span>UABBLER<span style="color:palevioletred;">&gt;</span></h1>
+            <hr color="palevioletred" size="3px" id="headerline">    
+        </div>
+  
+        <div class="container" id="content" style="position:absolute; left:0.6%; top:13%; display:inline; color: palevioletred;">
             <nav>
-            <ul class="mcd-menu">
-                <li>
-                    <a href="{{url_for('thezone')}}" class="active">
-                        <i class="fa fa-home"></i>
-                        <strong>THE ZONE</strong>
-                        <small>You Are Here</small>
-                    </a>
-                </li>
-                <li>
-                    <a href=""> 
-                        <i class="fa-solid fa-circle-question"></i>
-                        <strong>What is this</strong>
-                        <small>What is Squabbler?</small>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <i class="fa-solid fa-ghost"></i>
-                        <strong>Anonymity</strong>
-                        <small>How to Stay Anonymous</small>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <i class="fa-solid fa-message"></i>
-                        <strong>Feedback</strong>
-                        <small>Reach Out</small>
-                    </a>
-                </li>
+                <ul class="mcd-menu" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
                     <li>
-                        <a href="">
-                            <i class="fa-solid fa-scroll"></i>
-                            <strong>Regulations</strong>
-                            <small>Maintaining Professionalism</small>
+                        <a href="{{url_for('thezone')}}" class="active">
+                            <i class="fa fa-home"></i>
+                            <strong>{{ alias }}'S ZONE</strong>
+                            <small>You Are Here</small>
                         </a>
                     </li>
                     <li>
-                    <a href="{{url_for('logout')}}">
-                        <i class="fa-solid fa-circle-xmark"></i>
-                        <strong>Exit</strong>
-                        <small>End Squabbler Session</small>
-                    </a>
-                </li>
-                <li class="float">
-    
-                    
-                </li>
-            </ul>
+                        <a href=""> 
+                            <i class="fa-solid fa-circle-question"></i>
+                            <strong>What is this</strong>
+                            <small>What is Squabbler?</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-ghost"></i>
+                            <strong>Anonymity</strong>
+                            <small>How to Stay Anonymous</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-message"></i>
+                            <strong>Feedback</strong>
+                            <small>Reach Out</small>
+                        </a>
+                    </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-scroll"></i>
+                                <strong>Regulations</strong>
+                                <small>Maintaining Professionalism</small>
+                            </a>
+                        </li>
+                        <li>
+                        <a href="{{url_for('logout')}}">
+                            <i class="fa-solid fa-circle-xmark"></i>
+                            <strong>Exit</strong>
+                            <small>End Squabbler Session</small>
+                        </a>
+                    </li>
+                    <li class="float">
+        
+                        
+                    </li>
+                </ul>
             </nav>
         </div>
 
-<main class="site-wrapper" style="position:absolute; top:40%; left:74.3%; transform: translate(-50%, -50%); color: white; display:inline;">
-  <div class="pt-table desktop-768">
-    <div class="pt-tablecell page-home absolute">
+
+        <main class="site-wrapper" style="position:absolute; top:48%; left:49.5%; transform: translate(-23.5%,-50%); color: white; display:inline-block;" id="hexmenu">
+            <div class="pt-table desktop-768">
+                <div class="pt-tablecell page-home absolute">
 
                     <div class="container">
                         <div class="row">
@@ -137,14 +141,34 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>"
                     </div>
                 </div>
             </div>
-  </main>
+        </main>
+
+        <div id="menuborder" style="position:absolute; top: 50%; left:50%; transform: translate(-50%,-50%); display:inline-block;">
+            <h2>{{ alias }}'S SQUABBLE ZONE</h2>
+
+        </div>
+    <!--- <script>
+    window.onscroll = function() {myFunction()};
+
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+    </script> -->
+
 </body>
         <footer>
-            <div class="footer-basic" style="position:absolute; top:106%; left:50%; transform: translate(-50%, -50%);  display:inline;">
+            <div class="footer-basic" style="position:absolute; top:106%; left:50%; transform: translate(-50%, -50%);  display:inline-block;">
                 <div class="social"><a href="#"><i class="fa-brands fa-tiktok"></i></a><a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
                 <ul class="list-inline">
                     <li class="list-inline-item"><a href="#">WHAT IS SQUABBLER</a></li>

@@ -1,69 +1,73 @@
-#connor {
-	text-align: left;
-
-}
-
-#copyright {
-	text-align: center;
-}
-
-
 body {
-	background-color: #888888;
+	background-color: whitesmoke;
 	text-align: center;
 	font-family: 'Lato', sans-serif;
 	overflow-x:hidden;
+	margin: 0;
 
 }
 
 
-/*footer {
-	background-color: white;
-	position: absolute;
-	bottom: 0;
-	width: 99%;
-	height: 4rem;
-	color: black;
-	font-size: 0.8em;
-	font-family: 'Lato', sans-serif;    
-}*/
-
-#connor {
-	text-align: left;
-
+#masthead {
+	margin: 0;
+	filter: drop-shadow(1px 1px 1px palevioletred); /********cool glow animation on image****/
 }
 
-#copyright {
-	text-align: center;
+#headerline {
+	margin: 0;  /****adjust line in header which impacts total size**/
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	filter: drop-shadow(1px 1px 1px palevioletred);
 }
+
 
 #inputtext {
-        color:  white;
+        color:  #777;
         font-family:  'Lato', sans-serif;
-        font-size:  1.9em;
+        font-size:  200%;
         margin: 5px;
 }
 
+#info {
+	color: #777;
+	font-family:  'Lato', sans-serif;
+}
 #input_form  {
 	width:  60%;
 	height: 35%;
+
 }
 
 #alias_input {
         width:  75%;
-        height: 70px;
-        margin: 30px;
-        border: none;
+        height: 35%;
+        margin: 40px;
+        border: 2px solid #777;
         border-radius: 10px;
         font-family:  'Lato', sans-serif;
         text-align: center;
-        font-size:  1.6em;
+        font-size:  180%;
+        white-space: nowrap;
+        letter-spacing: .1rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #alias_input:hover {
-	font-size: 1.55em;
+	font-size: 175%;
 
 }
+
+/*******************************************************HEader Start*****************************************/
+
+.header {
+  padding: 10px 16px;
+  background: #777;   /*COLOR OF HEADER*/
+  color: #f1f1f1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+
 
 /******************************************************************footer staRT********************/
 
@@ -71,6 +75,7 @@ body {
   padding: 2% 0;
   background-color:#ffffff;
   color:#4b4c4d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  
 }
 
@@ -135,6 +140,7 @@ body {
 	top: 110%;	
 	left: 50%;
 	transform: translate(-50%, -50%);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .link_wrapper {

@@ -8,10 +8,13 @@
 	</head>
 
 	<body>
-		<h1><span style="color: palevioletred;">&lt;</span>S<span style="color: palevioletred;">Q</span>UABBLER<span style="color: palevioletred;">&gt;</span></h1>
-        <div class="container" style="position:absolute; left:0.6%; top:9%; display:inline">
+        <div class="header" id="myHeader">
+            <h1 id="h3s" style="display: inline-block;"><span style="color: palevioletred;">&lt;</span>S<span style="color:palevioletred;">Q</span>UABBLER<span style="color:palevioletred;">&gt;</span></h1>
+            <hr color="palevioletred" size="3px" id="headerline">    
+        </div>
+        <div class="container" style="position:absolute; left:0.6%; top:13%; display:inline">
             <nav>
-            <ul class="mcd-menu">
+            <ul class="mcd-menu" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
                 <li>
                     <a href="{{url_for('thezone')}}">
                         <i class="fa-solid fa-arrow-left"></i>
@@ -26,18 +29,27 @@
             </ul>
             </nav>
         </div>
-		<p style="color:white;">Would you like to end this session?</p>
-		<div class="wrapper">
-  			<div class="link_wrapper">
-    				<a href="{{url_for('terminate')}}" id="logoutbutton">End Session</a>
-    				<div class="icon">
-      					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
-        				<path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
-      					</svg>
-    				</div>
- 			</div>
+
+
   
 		</div>
+		        <div id="menuborder" style="position:absolute; top: 50%; left:50%; transform: translate(-50%,-50%); display:inline-block;">
+            			<div id="chatdev">
+        				<h2 id="inputtext" style="position:absolute; top:18%; left:50%; transform: translate(-50%, -50%); white-space: nowrap;">TERMINATE SQUABBLER SESSION?</h2>
+					<p style="color:#777; position: absolute; top: 27%; left:50%; transform: translate(-50%, -50%); white-space: nowrap;">THIS WILL REMOVE ALL OF YOUR SESSION DATA FROM OUR SERVER.</p>
+				<div class="wrapper" style="position: absolute; top:55%; left:50%; transform: translate(-50%, -50%);">
+  					<div class="link_wrapper">																
+    						<a href="{{url_for('terminate')}}" id="logoutbutton">End Session</a>
+    						<div class="icon">
+      							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+        						<path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+      							</svg>
+    						</div>
+ 					</div>
+				</div>
+
+        			</div>
+        		</div>
 
 	</body>
         <footer>
