@@ -101,7 +101,7 @@ body {
 #menuborder {
   padding: 10px 16px;
   background: white;   /*COLOR OF BACKGROUND*/
-  border-radius: 10px;
+  border-radius: 0px;
   z-index: 1;
   height: 50%;
   width: 50%;
@@ -109,8 +109,10 @@ body {
   text-align: center;
   outline: 2px solid palevioletred;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  filter: drop-shadow(1px 1px 1px palevioletred);
 
 }
+
 
 #hexmenu {
   z-index: 9;
@@ -123,7 +125,7 @@ body {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s; }
   #a:hover, #a:focus {
-    color: #777;  /**************************change color of text on transition**/
+    color: white;  /**************************change color of text on transition**/
     text-decoration: none;
     outline: 0 none; }
 
