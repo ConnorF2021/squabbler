@@ -18,16 +18,19 @@ def landing():
 
 @app.route("/SetAlias", methods = ['GET','POST'])
 def setalias():
-	if 'UserID' in session:
+	if 'UserID' in session and (len(session['UserID']) == 30):
 		return redirect(url_for('thezone'))
 	elif request.method == 'POST':
 		alias_unfiltered = request.form['alias_input']
-		Alias = alias_unfiltered.upper()
-		letters = string.punctuation
-		session["UserID"] = ( ''.join(random.choice(letters) for i in range(30)) )
-		resp = make_response(redirect(url_for('thezone')))
-		resp.set_cookie('Alias', Alias)
-		return resp
+		if (len(alias_unfiltered) < 3) or (len(alias_unfiltered) > 12):
+			return redirect(url_for('setalias'))
+		else:
+			Alias = alias_unfiltered.upper()
+			letters = string.punctuation
+			session["UserID"] = ( ''.join(random.choice(letters) for i in range(30)) )
+			resp = make_response(redirect(url_for('thezone')))
+			resp.set_cookie('Alias', Alias)
+			return resp
 	return render_template("setalias.html")
 
 @app.route("/Anon")
@@ -53,7 +56,7 @@ def logout():
 
 @app.route("/TheZone", methods = ['GET','POST'])
 def thezone():
-	if 'UserID' in session:
+	if 'UserID' in session and (len(session['UserID']) == 30):
 		Alias = request.cookies.get('Alias')
 		return render_template("thezone.html", alias = Alias)
 
@@ -68,9 +71,9 @@ def terminate():
 	resp.set_cookie('roomID', 'None', max_age=0)
 	return resp
 
-@app.route("/SoloEngagements", methods = ['GET', 'POST'])
-def soloengagements():
-	if request.method == 'POST':
+@app.route("/SoloSquabble", methods = ['GET', 'POST'])
+def solosquabble():
+	if 'UserID' in session and request.method == 'POST' and (len(session['UserID']) == 30):
 		room_unfiltered = request.form['room_input']
 		roomID = room_unfiltered
 
@@ -79,30 +82,30 @@ def soloengagements():
 		return resp
 
 
-	elif 'UserID' in session and not request.method == 'POST':
+	elif 'UserID' in session and not request.method == 'POST' and (len(session['UserID']) == 30):
 		Alias = request.cookies.get('Alias')
 		return render_template("rooms.html", alias = Alias)
 
 	return redirect(url_for('setalias'))
 
-@app.route("/CreateEngagement", methods = ['GET', 'POST'])
-def createengagement():
-	if request.method == 'POST':
+@app.route("/CreateSquabble", methods = ['GET', 'POST'])
+def createsquabble():
+	if 'UserID' in session and request.method == 'POST' and (len(session['UserID']) == 30):
 		topic_unfiltered = request.form['topic_input']
 		topic = topic_unfiltered
-
+		
 		desc_unfiltered = request.form['desc_input']
 		desc = desc_unfiltered
 
 		digits = string.digits
-		roomID = ( ''.join(random.choice(digits) for i in range(20)) )
+		roomID = ( ''.join(random.choice(digits) for i in range(50)) )
 
 		resp = make_response(redirect(url_for('sololive')))
 		resp.set_cookie('roomID', roomID)
 		return resp
 
 
-	elif 'UserID' in session and not request.method == 'POST':
+	elif 'UserID' in session and not request.method == 'POST' and (len(session['UserID']) == 30):
 		Alias = request.cookies.get('Alias')
 		return render_template("createroom.html", alias = Alias)
 
@@ -113,12 +116,13 @@ def sololive():
 	if 'UserID' in session:
 		username = request.cookies.get('Alias')
 		roomID = request.cookies.get('roomID')
-		return render_template("chat.html", username = username, room = roomID)
+		UserID = session['UserID']
+		return render_template("chat.html", username = username, room = roomID, UserID=UserID)
 	return redirect(url_for('setalias'))
 
 @socketio.on('send_message')
 def handle_send_message_event(data):
-    app.logger.info("{} has sent message to the room {}: {}".format(data['username'],
+    app.logger.info("{} has sent message to the room {}: {}".format(data['UserID'],
                                                                     data['room'],
                                                                     data['message']))
     socketio.emit('receive_message', data, room=data['room'])

@@ -4,6 +4,7 @@
         <meta name="robots" content="noindex">
 		<link rel="stylesheet" href="{{url_for('static', filename='css/roomsstylesheet.css')}}">
         <script src="https://kit.fontawesome.com/ea05a55ff2.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Squabbler | Engagements</title>
 	</head>
 
@@ -65,15 +66,19 @@
             </ul>
             </nav>
         </div>
-        <div id="chatdev">
-		  <p style="color:white;">Chat Development</p>
-    		<form action="" method="post" id="room_submit">
-    			<div>
-    				<label>Room ID</label>
-    				<input type="text" name="room_input" id="room_input" style="display: inline; position: absolute;">
-    				<input type="submit" value="Submit">
-    			</div>
-    		</form>
+
+
+        <div id="menuborder" style="position:absolute; top: 50%; left:50%; transform: translate(-50%,-50%); display:inline-block;">
+            <div id="chatdev">
+                <p style="color:#777;">Chat Development</p>
+                <form action="" method="post" id="room_submit">
+                    <div>
+                    <label>Room ID</label>
+                    <input type="text" name="room_input" id="room_input" style="display: inline; position: absolute;">
+                    <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
         </div>
 
 

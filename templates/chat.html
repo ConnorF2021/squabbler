@@ -3,18 +3,45 @@
 	<head>
         <meta name="robots" content="noindex">
 		<link rel="stylesheet" href="{{url_for('static', filename='css/chatstylesheet.css')}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/ea05a55ff2.js" crossorigin="anonymous"></script>
 		<title>Squabbler | Live</title>
 	</head>
 
 	<body>
-		<h1 id="h1s"><span style="color: palevioletred;">&lt;</span>S<span style="color: palevioletred;">Q</span>UABBLER<span style="color: palevioletred;">&gt;</span></h1>
-
-		<h2 id="h2a">ALIAS: {{ username }}, ROOM: {{ room }}</h2>
-		<div id="messages"></div>
+        <div class="header" id="myHeader">
+            <h1 id="h3s" style="display: inline-block;"><span style="color: red;">&lt;</span>S<span style="color:red;">Q</span>UABBLER LIVE<span style="color:red;">&gt;</span></h1>
+            <hr color="red" size="3px" id="headerline">    
+        </div>
+        <div class="container" style="position:absolute; left:0.6%; top:13%; display:inline">
+            <nav>
+            <ul class="mcd-menu" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <li>
+                    <a href="{{url_for('thezone')}}">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <strong>THE ZONE</strong>
+                        <small>Back to The Zone</small>
+                    </a>
+                </li>
+                <li class="float">
+    
+                    
+                </li>
+            </ul>
+            </nav>
+        </div>
+        <div id="menuborder" style="position:fixed; top: 59%; left:50%; transform: translate(-50%,-50%); display:inline-block;">
+          <div id="chatborder" class="scrollingdiv" style="position:absolute; top: 41%; left:50%; transform: translate(-50%,-50%); display:inline-block;">  
+		      <div id="messages">
+  
+              </div>
+          </div>
+          <form id="message_input_form" style="position:absolute; top: 90%; left:50%; transform: translate(-50%,-50%); display:inline-block;">
+                <input style="position:absolute; top: 70%; left:50%; transform: translate(-50%,-50%);" type="text" id="message_input" autocomplete="off" placeholder="TYPE YOUR MESSAGES HERE..." spellcheck="false">
+            </form>
+        </div>
 		
-			<form id="message_input_form">
-				<input type="text" id="message_input" autocomplete="off" placeholder="Press Enter To Send Message" spellcheck="false">
-			</form>
+
 
 
 	</body>
@@ -37,6 +64,7 @@
                 socket.emit('send_message', {
                     username: "{{ username }}",
                     room: "{{ room }}",
+                    UserID: "{{ UserID }}",
                     message: message
                 })
             }
@@ -54,14 +82,23 @@
 
     socket.on('receive_message', function (data) {
         console.log(data);
-        const newNode = document.createElement('div');
-        newNode.innerHTML = `<b>${data.username}:&nbsp;</b> ${data.message}`;
-        document.getElementById('messages').appendChild(newNode);
+        if (data.UserID !== "{{ UserID }}") {
+            const newNode = document.createElement('div');
+            newNode.innerHTML = `<b style="color: red;">${data.username}:&nbsp;</b> ${data.message}`;
+            newNode.setAttribute('class','oppositemessage');
+            document.getElementById('messages').appendChild(newNode);
+        }
+        else {
+            const newNode = document.createElement('div');
+            newNode.innerHTML = `<b style="color: palevioletred;">${data.username}:&nbsp;</b> ${data.message}`;
+            newNode.setAttribute('class','localmessage');
+            document.getElementById('messages').appendChild(newNode); 
+        }
     });
 
     socket.on('join_room_announcement', function (data) {
         console.log(data);
-        if (data.username !== "{{ username }}") {
+        if (data.UserID !== "{{ UserID }}") {
             const newNode = document.createElement('div');
             newNode.innerHTML = `<b>${data.username}</b> has joined the room`;
             document.getElementById('messages').appendChild(newNode);

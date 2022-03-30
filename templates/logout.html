@@ -4,6 +4,7 @@
 		<meta name="robots" content="noindex">
 		<link rel="stylesheet" href="{{url_for('static', filename='css/logoutstylesheet.css')}}">
 		<script src="https://kit.fontawesome.com/ea05a55ff2.js" crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Squabbler | Exit</title>
 	</head>
 
@@ -33,10 +34,10 @@
 
   
 		</div>
-		        <div id="menuborder" style="position:absolute; top: 50%; left:50%; transform: translate(-50%,-50%); display:inline-block;">
-            			<div id="chatdev">
-        				<h2 id="inputtext" style="position:absolute; top:18%; left:50%; transform: translate(-50%, -50%); white-space: nowrap; filter: drop-shadow(1px 1px 1px #777);">TERMINATE SQUABBLER SESSION?</h2>
-					<p style="color:#777; position: absolute; top: 27%; left:50%; transform: translate(-50%, -50%); white-space: nowrap;">THIS WILL REMOVE ALL OF YOUR SESSION DATA FROM OUR SERVER.</p>
+		<div id="menuborder" style="position:absolute; top: 50%; left:50%; transform: translate(-50%,-50%); display:inline-block;">
+            		<div id="chatdev">
+        			<h2 id="inputtext" style="position:absolute; top:18%; left:50%; transform: translate(-50%, -50%); white-space: nowrap; filter: drop-shadow(1px 1px 1px #777);">TERMINATE SQUABBLER SESSION?</h2>
+				<p style="color:#777; position: absolute; top: 27%; left:50%; transform: translate(-50%, -50%); white-space: nowrap;">THIS WILL REMOVE ALL OF YOUR SESSION DATA FROM OUR SERVER.</p>
 				<div class="wrapper" style="position: absolute; top:55%; left:50%; transform: translate(-50%, -50%);">
   					<div class="link_wrapper">																
     						<a href="{{url_for('terminate')}}" id="logoutbutton">End Session</a>
@@ -48,8 +49,8 @@
  					</div>
 				</div>
 
-        			</div>
         		</div>
+        	</div>
 
 	</body>
         <footer>
