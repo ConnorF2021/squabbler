@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="{{url_for('static', filename='css/thezonestylesheet.css')}}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/ea05a55ff2.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='squabblerfavicon.png') }}">
         <title>Squabbler | The Zone</title>
     </head>
     <body>
@@ -66,106 +67,100 @@
                 </ul>
             </nav>
         </div>
+        
 
+        <div id="menuborder" style="position:absolute; top: 50%; left:50%; transform: translate(-50%,-50%); display:inline-block;">
+            <h2 id="menutitle" class="typewriter" style="position:fixed; top: 5%; left:50%; transform: translate(-50%,-50%); display:inline-block;">{{ alias }}'S SQUABBLE ZONE</h2>
+            <div id="menuinterior" style="position: absolute; top:21%;">
+                <main class="site-wrapper" style="position:absolute; top:39.5%; left:49%; transform: translate(-23.5%,-50%); color: white; display:inline-block;" id="hexmenu">
+                <div class="pt-table desktop-768">
+                    <div class="pt-tablecell page-home absolute">
 
-        <main class="site-wrapper" style="position:absolute; top:48%; left:49.5%; transform: translate(-23.5%,-50%); color: white; display:inline-block;" id="hexmenu">
-            <div class="pt-table desktop-768">
-                <div class="pt-tablecell page-home absolute">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
 
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
-
-                                <div class="hexagon-menu clear">    
-                                    <div class="hexagon-item">
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <a href="{{ url_for('solosquabble')}}" class="hex-content" id="a">
-                                            <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="fa fa-user"></i>
+                                    <div class="hexagon-menu clear">    
+                                        <div class="hexagon-item">
+                                            <div class="hex-item">
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                            </div>
+                                            <div class="hex-item">
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                            </div>
+                                            <a href="{{ url_for('solosquabble')}}" class="hex-content" id="a">
+                                                <span class="hex-content-inner">
+                                                    <span class="icon">
+                                                        <i class="fa fa-user"></i>
+                                                    </span>
+                                                    <span class="title"><b>SOLO SQUABBLE</b></span>
                                                 </span>
-                                                <span class="title"><b>SOLO SQUABBLE</b></span>
-                                            </span>
-                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="palevioletred"></path></svg>
-                                        </a>
-                                    </div>
-                                    <div class="hexagon-item">
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
+                                                <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="palevioletred"></path></svg>
+                                            </a>
                                         </div>
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <a  class="hex-content" id="a">
-                                            <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="fa fa-users"></i>
+                                        <div class="hexagon-item">
+                                            <div class="hex-item">
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                            </div>
+                                            <div class="hex-item">
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                            </div>
+                                            <a  class="hex-content" id="a">
+                                                <span class="hex-content-inner">
+                                                    <span class="icon">
+                                                        <i class="fa fa-users"></i>
+                                                    </span>
+                                                    <span class="title"><b>MULTI SQUABBLE</b></span>
                                                 </span>
-                                                <span class="title"><b>MULTI SQUABBLE</b></span>
-                                            </span>
-                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="palevioletred"></path></svg>
-                                        </a>    
-                                    </div>
-                                    <div class="hexagon-item">
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
+                                                <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="palevioletred"></path></svg>
+                                            </a>    
                                         </div>
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <a href="{{ url_for('createsquabble')}}" class="hex-content" id="a">
-                                            <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="fa solid fa-plus"></i>
+                                        <div class="hexagon-item">
+                                            <div class="hex-item">
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                            </div>
+                                            <div class="hex-item">
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                            </div>
+                                            <a href="{{ url_for('createsquabble')}}" class="hex-content" id="a">
+                                                <span class="hex-content-inner">
+                                                    <span class="icon">
+                                                        <i class="fa solid fa-plus"></i>
+                                                    </span>
+                                                    <span class="title"><b>CREATE SQUABBLE</b></span>
                                                 </span>
-                                                <span class="title"><b>CREATE SQUABBLE</b></span>
-                                            </span>
-                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="palevioletred"></path></svg>
-                                        </a>
+                                                <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="palevioletred"></path></svg>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>"
+                        </div>
                     </div>
                 </div>
-            </div>
-        </main>
-
-        <div id="menuborder" style="position:absolute; top: 50%; left:50%; transform: translate(-50%,-50%); display:inline-block;">
-            <h2 id="menutitle"style="filter: drop-shadow(1px 1px 1px #777);">{{ alias }}'S SQUABBLE ZONE</h2>
-
+            </main>
+        </div>   
         </div>
-    <!--- <script>
-    window.onscroll = function() {myFunction()};
+        
+        <div id="infoborder" style="position:absolute; top: 50%; left:88.2%; transform: translate(-50%,-50%); display:inline-block;">
+            <h2 id="infotitle" style="position:fixed; top: 5%; left:50%; transform: translate(-50%,-50%); display:inline-block;">INFORMATION</h2>
+            <div id="infointerior" style="position:fixed; top: 58%; left:50%; transform: translate(-50%,-50%); display:inline-block;">
+                <h3>PRE-ALPHA</h3>
 
-    var header = document.getElementById("myHeader");
-    var sticky = header.offsetTop;
-
-    function myFunction() {
-      if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-      } else {
-        header.classList.remove("sticky");
-      }
-    }
-    </script> -->
+            </div>
+        </div>
 
 </body>
         <footer>

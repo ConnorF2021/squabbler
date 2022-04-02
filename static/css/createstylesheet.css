@@ -19,9 +19,76 @@ body {
   filter: drop-shadow(1px 1px 1px palevioletred);
 }
 
-#chatdev {
-    text-align: center;
+#menutitle {
+        margin-bottom:  10px;
 }
+
+#menuborder {
+  padding: 10px 16px;
+  background: white;   /*COLOR OF BACKGROUND*/
+  border-radius: 0px;
+  z-index: 1;
+  height: 50%;
+  width: 50%;
+  color: #777;
+  text-align: center;
+  outline: 2px solid palevioletred;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  filter: drop-shadow(1px 1px 1px palevioletred);
+
+}
+
+#topic_input {
+
+        width:  80%;
+        height: 10%;
+        border: 2px solid #777;
+        border-radius: 10px;
+        font-family:  'Lato', sans-serif;
+        filter: drop-shadow(1px 1px 1px #777);
+        text-align: center;
+}
+
+#desc_input {
+
+        width:  80%;
+        height: 40%;
+        border: 2px solid #777;
+        border-radius: 10px;
+        font-family:  'Lato', sans-serif;
+        filter: drop-shadow(1px 1px 1px #777);
+        overflow-x:hidden;
+        word-wrap: break-word;
+
+}
+
+#radioinput {
+    filter: drop-shadow(1px 1px 1px #777);
+}
+
+/************************************************start scrollbar************************************************************/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 0px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: palevioletred; 
+  border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
 
 /*******************************************************HEader Start*****************************************/
 

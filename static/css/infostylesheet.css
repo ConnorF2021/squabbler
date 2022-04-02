@@ -19,41 +19,22 @@ body {
 	filter: drop-shadow(1px 1px 1px palevioletred);
 }
 
+/*********************************************menuborder*****************************/
 
-#inputtext {
-        color:  #777;
-        font-family:  'Lato', sans-serif;
-        font-size:  200%;
-        margin: 5px;
-}
-
-#info {
-	color: #777;
-	font-family:  'Lato', sans-serif;
-}
-#input_form  {
-	width:  60%;
-	height: 35%;
+#menuborder {
+  padding: 10px 16px;
+  background: white;   /*COLOR OF BACKGROUND*/
+  border-radius: 0px;
+  z-index: 1;
+  height: 50%;
+  width: 50%;
+  color: #777;
+  outline: 2px solid palevioletred;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  filter: drop-shadow(1px 1px 1px palevioletred);
 
 }
 
-#alias_input {
-        width:  75%;
-        height: 35%;
-        border: 2px solid #777;
-        border-radius: 10px;
-        font-family:  'Lato', sans-serif;
-        text-align: center;
-        font-size:  180%;
-        white-space: nowrap;
-        letter-spacing: .1rem;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#alias_input:hover {
-	font-size: 175%;
-
-}
 
 /************************************************start scrollbar************************************************************/
 
@@ -156,90 +137,6 @@ body {
   color:#aaa;
   margin-bottom:0;
 }
-
-/* start button css ----------------------------------------------------------------------------------------- */
-
-.wrapper {
-	position: absolute;
-	top: 110%;	
-	left: 50%;
-	transform: translate(-50%, -50%);
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.link_wrapper {
-	position: relative;
-}
-
-#formbutton {
-	display: block;
-	width: 265px;
-	height: 65px;
-	line-height: 50px;
-	font-size: 120%;
-	font-weight: bold;
-	text-decoration: none;
-	background: #db7093;
-	text-align: center;
-	color: #fff;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	border: 3px solid #db7093;
-	transition: all .35s;
-}
-
-.icon svg{
-	width: 30px;
-	position: absolute;
-	top: calc(50% - 15px);
-	left: calc(50% - 15px);
-	transform: rotate(-45deg);
-	fill: #00FF00;
-	transition: all .35s;
-}
-
-.icon {
-	width: 50px;
-	height: 50px;
-	border: 3px solid transparent;
-	position: fixed;
-	transform: rotate(45deg);
-	right: 0;
-	top: 5%;
-	z-index: -1;
-	transition: all .35s;
-}
-
-#formbutton:hover {
-	width: 225px;
-	border: 3px solid #00FF00;
-	background: transparent;
-	color: #00FF00;
-}
-
-#formbutton:hover + .icon{
-  border: 3px solid #00FF00;
-  right: -20%;
-}
-
-/*************************************************************infoborder********************************/
-
- #infointerior {
-        padding: 10px 16px;
-        background: #777;   /*COLOR OF BACKGROUND*/
-        border-radius: 6px;
-        z-index: 1;
-        height: 60%;
-        width: 83%;
-        text-align: center;
-        color: whitesmoke;
-        filter: drop-shadow(1px 1px 1px #777);
-        box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), inset 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        overflow-x:hidden;
-        word-wrap: break-word;
-        overflow-y: scroll;
-        flex-direction: column-reverse;
- }
 
 /* start menu css ------------------------------------------------------------------------------------------- */
 .clearfix:before,

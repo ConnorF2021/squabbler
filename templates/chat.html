@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="{{url_for('static', filename='css/chatstylesheet.css')}}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/ea05a55ff2.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='squabblerfavicon.png') }}">
 		<title>Squabbler | Live</title>
 	</head>
 
@@ -13,6 +14,7 @@
             <h1 id="h3s" style="display: inline-block;"><span style="color: red;">&lt;</span>S<span style="color:red;">Q</span>UABBLER LIVE<span style="color:red;">&gt;</span></h1>
             <hr color="red" size="3px" id="headerline">    
         </div>
+
         <div class="container" style="position:absolute; left:0.6%; top:13%; display:inline">
             <nav>
             <ul class="mcd-menu" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
@@ -30,18 +32,26 @@
             </ul>
             </nav>
         </div>
+
         <div id="menuborder" style="position:fixed; top: 59%; left:50%; transform: translate(-50%,-50%); display:inline-block;">
-          <div id="chatborder" class="scrollingdiv" style="position:absolute; top: 41%; left:50%; transform: translate(-50%,-50%); display:inline-block;">  
+          <div id="chatborder" class="scrollingdiv" style="position:absolute; top: 42%; left:50%; transform: translate(-50%,-50%); display:inline-block;">  
 		      <div id="messages">
   
               </div>
           </div>
           <form id="message_input_form" style="position:absolute; top: 90%; left:50%; transform: translate(-50%,-50%); display:inline-block;">
-                <input style="position:absolute; top: 70%; left:50%; transform: translate(-50%,-50%);" type="text" id="message_input" autocomplete="off" placeholder="TYPE YOUR MESSAGES HERE..." spellcheck="false">
+                <input style="position:absolute; top: 70%; left:50%; transform: translate(-50%,-50%);" type="text" id="message_input" autocomplete="off" placeholder="TYPE HERE..." spellcheck="false">
             </form>
         </div>
 		
-
+        <div id="infoborder" style="position:fixed; top: 41.5%; left:88%; transform: translate(-50%,-50%); display:inline-block;">
+            <h2 id="menutitle" style="filter: drop-shadow(1px 1px 1px red); position:fixed; top: 5%; left:50%; transform: translate(-50%,-50%); display:inline-block;">ROOM INFO</h2>
+            <div id="infointerior" style="position:fixed; top: 62%; left:50%; transform: translate(-50%,-50%); display:inline-block;">
+                <h3 style="filter: drop-shadow(1px 1px 1px red);">ROOM ADMIN:</h3>
+                <h3 style="filter: drop-shadow(1px 1px 1px red);">CHALLENGER:</h3>
+                <h3 style="filter: drop-shadow(1px 1px 1px red);">TOPIC:</h3>
+            </div>
+        </div>
 
 
 	</body>
@@ -84,13 +94,15 @@
         console.log(data);
         if (data.UserID !== "{{ UserID }}") {
             const newNode = document.createElement('div');
-            newNode.innerHTML = `<b style="color: red;">${data.username}:&nbsp;</b> ${data.message}`;
+            newNode.innerHTML = `<b style="color: red; filter: drop-shadow(0.5px 0.5px 0.5px red);
+">${data.username}:&nbsp;</b> ${data.message}`;
             newNode.setAttribute('class','oppositemessage');
             document.getElementById('messages').appendChild(newNode);
         }
         else {
             const newNode = document.createElement('div');
-            newNode.innerHTML = `<b style="color: palevioletred;">${data.username}:&nbsp;</b> ${data.message}`;
+            newNode.innerHTML = `<b style="color: palevioletred; filter: drop-shadow(0.5px 0.5px 0.5px palevioletred);
+">${data.username}:&nbsp;</b> ${data.message}`;
             newNode.setAttribute('class','localmessage');
             document.getElementById('messages').appendChild(newNode); 
         }
@@ -100,7 +112,8 @@
         console.log(data);
         if (data.UserID !== "{{ UserID }}") {
             const newNode = document.createElement('div');
-            newNode.innerHTML = `<b>${data.username}</b> has joined the room`;
+            newNode.innerHTML = `<b style="filter: drop-shadow(1px 1px 1px red);">${data.username}</b> has joined the Squabble`;
+            OtherAlias: {data.username};
             document.getElementById('messages').appendChild(newNode);
         }
     });
@@ -108,7 +121,7 @@
     socket.on('leave_room_announcement', function (data) {
         console.log(data);
         const newNode = document.createElement('div');
-        newNode.innerHTML = `<b>${data.username}</b> has left the room`;
+        newNode.innerHTML = `<b style="filter: drop-shadow(1px 1px 1px red);">${data.username}</b> has joined the Squabble`;
         document.getElementById('messages').appendChild(newNode);
     });
 </script>

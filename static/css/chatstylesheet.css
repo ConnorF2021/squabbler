@@ -22,8 +22,8 @@ body {
 
 #menuborder {
   padding: 10px 16px;
-  background: whitesmoke;   /*COLOR OF BACKGROUND*/
-  border-radius: 3px;
+  background: #777;   /*COLOR OF BACKGROUND*/
+  border-radius: 0px;
   z-index: 1;
   height: 70%;
   width: 50%;
@@ -35,27 +35,125 @@ body {
 
 }
 
+#menutitle {
+        margin-bottom:  10px;
+        color: white;
+        white-space: nowrap;
+}
+
+#infoborder {
+  padding: 10px 16px;
+  background: #777;   /*COLOR OF BACKGROUND*/
+  border-radius: 0px;
+  z-index: 1;
+  height: 35%;
+  width: 19%;
+  color: #777;
+  outline: 2px solid red;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  filter: drop-shadow(1px 1px 1px red);
+  text-align: center;
+}
+
 #chatborder {
   padding: 10px 16px;
   background: #777;   /*COLOR OF BACKGROUND*/
-  border-radius: 3px;
+  border-radius: 6px;
   z-index: 1;
-  height: 73%;
+  height: 76%;
   width: 93%;
-  color: #777;
   text-align: center;
-  outline: 2px solid red;
+  color: whitesmoke;
   filter: drop-shadow(1px 1px 1px #777);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), inset 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   overflow-x:hidden;
   word-wrap: break-word;
   overflow-y: scroll;
   flex-direction: column-reverse;
- 
+ }
 
+ #infointerior {
+        padding: 10px 16px;
+        background: #777;   /*COLOR OF BACKGROUND*/
+        border-radius: 6px;
+        z-index: 1;
+        height: 60%;
+        width: 83%;
+        text-align: center;
+        color: whitesmoke;
+        filter: drop-shadow(1px 1px 1px #777);
+        box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), inset 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        overflow-x:hidden;
+        word-wrap: break-word;
+        overflow-y: scroll;
+        flex-direction: column-reverse;
+ }
+
+/************************************************start scrollbar************************************************************/
+
+::-webkit-scrollbar {
+  width: 10px;
 }
 
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 6px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 6px;
+}
 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+/*********************************************start input text ******************************************/
+
+input, select, textarea{
+    color: white;
+    text-align: center;
+    filter: drop-shadow(1px 1px 1px red);
+    outline: none;
+}
+
+/**********************************************************start placeholder********************************************************/
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  opacity: 1; /* Firefox */
+  text-align: center;
+  background-color: #565656;
+  color: transparent;
+  text-shadow: 1px 1px 1.5px rgba(255,255,255,0.5);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ \
+  text-align: center;
+  background-color: #565656;
+  color: transparent;
+  text-shadow: 1px 1px 1.5px rgba(255,255,255,0.5);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  text-align: center;
+  background-color: #565656;
+  color: transparent;
+  text-shadow: 1px 1px 1.5px rgba(255,255,255,0.5);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}
 
 .localmessage {
         border:  2px solid white;
@@ -65,7 +163,7 @@ body {
         text-align: left;
         color: #777;
         margin:  10px 10px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .oppositemessage {
@@ -94,9 +192,11 @@ body {
         width: 100%;
         height: 100%;
         border: 2px solid #777;
-        border-radius: 3px;
+        background-color: #777;
+        border-radius: 6px;
         font-family:  'Lato', sans-serif;
         filter: drop-shadow(1px 1px 1px #777);
+        box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), inset 0 6px 12px 0 rgba(0, 0, 0, 0.2);
         font-size: 1.3em;
 
 
@@ -105,7 +205,6 @@ body {
 #message_input_form {
         width: 97%;
         height: 11%;
-
 }
 
 /*******************************************************HEader Start*****************************************/

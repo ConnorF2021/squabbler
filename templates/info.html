@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/infostylesheet.css')}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/ea05a55ff2.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='squabblerfavicon.png') }}">
+        <title>Squabbler | Info</title>
+    </head>
+    <body>
+        <div class="header" id="myHeader">
+            <img src="{{url_for('static', filename='squabhead.png')}}" align="middle" width="32%" height="9%" id="masthead"/>
+            <hr color="palevioletred" size="3px" id="headerline">    
+            </div>
+
+         <div class="container" style="position:absolute; left:0.6%; top:13%; display:inline">
+            <nav>
+            <ul class="mcd-menu" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <li>
+                    <a href="{{url_for('thezone')}}">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <strong>LANDING</strong>
+                        <small>Back to Landing</small>
+                    </a>
+                </li>
+                <li class="float">
+    
+                    
+                </li>
+            </ul>
+            </nav>
+        </div> 
+ 
+        
+
+        <div id="menuborder" style="position:absolute; top: 50%; left:50%; transform: translate(-50%,-50%); display:inline-block;">
+            <h2 id="menutitle" class="typewriter" style="filter: drop-shadow(1px 1px 1px #777);">WHAT IS SQUABBLER?</h2>
+
+ 
+
+        </div>
+
+</body>
+        <footer>
+            <div class="footer-basic" style="position:absolute; top:106%; left:50%; transform: translate(-50%, -50%);  display:inline-block;">
+                <div class="social"><a href="#"><i class="fa-brands fa-tiktok"></i></a><a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">WHAT IS SQUABBLER</a></li>
+                    <li class="list-inline-item"><a href="#">ANONYMITY</a></li>
+                    <li class="list-inline-item"><a href="#">REGULATIONS</a></li>
+                    <li class="list-inline-item"><a href="#">PRIVACY POLICY</a></li>
+                </ul>
+                <p class="copyright">SQUABBLER © 2022</p>
+        </div>
+        </footer>
+</html>

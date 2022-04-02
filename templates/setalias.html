@@ -6,12 +6,13 @@
 		<title>Squabbler | Choose An Alias</title>
 		<link rel="stylesheet" href="{{url_for('static', filename='css/indexstylesheet.css')}}">
 		<script src="https://kit.fontawesome.com/ea05a55ff2.js" crossorigin="anonymous"></script>
+		<link rel="icon" type="image/x-icon" href="{{url_for('static', filename='squabblerfavicon.png') }}">
 	</head>
 	<body>
 	    <div class="header" id="myHeader">
             <img src="{{url_for('static', filename='squabhead.png')}}" align="middle" width="32%" height="9%" id="masthead"/>
             <hr color="palevioletred" size="3px" id="headerline">    
-        </div>
+            </div>
 
 		
 		
@@ -20,7 +21,7 @@
 			<nav>
 				<ul class="mcd-menu" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 					<li>
-						<a href="">
+						<a href="{{url_for('info')}}">
 							<i class="fa-solid fa-circle-question"></i>
 							<strong>What is this</strong>
 							<small>What is Squabbler?</small>
