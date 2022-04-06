@@ -50,81 +50,33 @@ body {
 /*******************************************************HEader Start*****************************************/
 
 .header {
-  padding: 10px 16px;
   background: #777;   /*COLOR OF HEADER*/
   color: #f1f1f1;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 
 /******************************************************************footer staRT********************/
 
-.footer-basic {
-  padding: 2% 0;
-  background-color:white;
-  color:#4b4c4d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                                
+#footermainborder {
+  border: 1px solid whitesmoke;
+  background: whitesmoke;
+  width: 100%;
+  height: 20%;
+  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.2), inset 0 1.5px 5px 0 rgba(0, 0, 0, 0.19);
 }
 
-.footer-basic ul {
-  padding:0;
-  list-style:none;
-  text-align:center;
-  font-size:18px;
-  line-height:1.6;
-  margin-bottom:0%;
-}
-
-.footer-basic li {
-  padding:0 10px;
-}
-
-.footer-basic ul a {
-  color:inherit;
-  text-decoration:none;
-  opacity:0.8;
-}
-
-.footer-basic ul a:hover {
-  opacity:1;
-}
-
-.footer-basic .social {
-  text-align:center;
-  padding-bottom:25px;
-}
-
-.footer-basic .social > a {
-  font-size:24px;
-  width:40px;
-  height:40px;
-  line-height:40px;
-  display:inline-block;
-  text-align:center;
-  border-radius:50%;
-  border:1px solid #ccc;
-  margin:0 8px;
-  color:inherit;
-  opacity:0.75;
-}
-
-.footer-basic .social > a:hover {
-  opacity:0.9;
-}
-
-.footer-basic .copyright {
-  margin-top:15px;
-  text-align:center;
-  font-size:13px;
-  color:#aaa;
-  margin-bottom:0;
+#footerleaflet {
+  border: 1px solid whitesmoke;
+  background: whitesmoke;
+  width: 6%;
+  height: 29.2%;
+  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.2), inset 0 1.5px 5px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*****************************************************info****************************/
 
 #infoborder {
-  padding: 10px 16px;
   background: white;   /*COLOR OF BACKGROUND*/
   border-radius: 0px;
   z-index: 1;
@@ -132,7 +84,7 @@ body {
   width: 19%;
   color: white;
   outline: 2px solid palevioletred;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   filter: drop-shadow(1px 1px 1px palevioletred);
   text-align: center;
 }
@@ -143,16 +95,15 @@ body {
 }
 
  #infointerior {
-        padding: 10px 16px;
         background: white;   /*COLOR OF BACKGROUND*/
         border-radius: 6px;
         z-index: 1;
-        height: 68%;
-        width: 83%;
+        height: calc(80% - 10px);
+        width: calc(100% - 20px);
         text-align: center;
         color: #777;
         filter: drop-shadow(1px 1px 1px white);
-        box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), inset 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.2), inset 0 1.5px 5px 0 rgba(0, 0, 0, 0.19);
         overflow-x:hidden;
         word-wrap: break-word;
         overflow-y: scroll;
@@ -167,30 +118,27 @@ body {
 }
 
 #menuborder {
-  padding: 10px 16px;
   background: white;   /*COLOR OF BACKGROUND*/
   border-radius: 0px;
   z-index: 1;
-  height: 50%;
-  width: 50%;
+  height: 54%;
+  width: 52%;
   color: #777;
   outline: 2px solid palevioletred;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   filter: drop-shadow(1px 1px 1px palevioletred);
 
 }
 
 #menuinterior {
-
-        padding: 10px 16px;
         background: white;   /*COLOR OF BACKGROUND*/
         border-radius: 6px;
         z-index: 1;
-        height: 68%;
-        width: 90.5%;
+        height: calc(80% - 10px);
+        width: calc(100% - 20px);
         color: #777;
         filter: drop-shadow(1px 1px 1px white);
-        box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), inset 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.2), inset 0 1.5px 5px 0 rgba(0, 0, 0, 0.19);
 
 }
 

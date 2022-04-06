@@ -12,7 +12,7 @@ app.config['SECRET_KEY'] = secret_key
 
 @app.route("/", methods = ['GET','POST'])
 def landing():
-	if 'Alias' in session:
+	if 'UserID' in session:
 		return redirect(url_for('thezone'))
 	return redirect(url_for('setalias'))
 
